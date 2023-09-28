@@ -4,7 +4,7 @@
 	import { MessageCircle, Menu } from 'lucide-svelte';
 </script>
 
-<div class="mix-blend-difference fixed w-[96%]">
+<div class="mix-blend-difference fixed w-[96%] z-[1000]">
 	<div class="w-full">
 		<nav class="p-4 pt-8 flex justify-between items-center">
 			<div class="flex items-center gap-x-2">
@@ -27,4 +27,3 @@
 		</nav>
 	</div>
 </div>
-
