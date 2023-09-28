@@ -4,7 +4,7 @@
 	import { Info, Award } from 'lucide-svelte';
 	import CarSelector from '$lib/car-selector.svelte';
 
-	let color: 'grey' | 'blue' | 'black' | 'white' = 'blue';
+	let color: 'silver' | 'blue' | 'black' | 'white' = 'blue';
 	const setColor = (setcolor) => {
 		color = setcolor;
 	};
@@ -18,8 +18,10 @@
 		</a>
 	</div>
 	<span class="text-xl text-gray-500">AMG C63 Coupe - 2023</span>
-	<div class="mx-auto mt-4 flex items-center justify-between h-[70%] w-[90%]">
-		<div class="flex flex-col gap-y-4">
+	<div
+		class="mx-auto mt-4 flex md:flex-row flex-col-reverse items-center justify-between mb-24 md:mb-0 md:h-[70%] md:w-[90%] w-full"
+	>
+		<div class="flex px-4 md:w-fit flex-col gap-y-4 gap-x-2 mt-4">
 			<Button>Performance</Button>
 			<Button active={true}>Design</Button>
 			<Button>Safety</Button>
@@ -31,7 +33,7 @@
 			<CarSelector selectedColor={color} />
 		</div>
 
-		<div class="absolute flex-col items-center flex w-[20rem] mt-[-16rem] right-8">
+		<div class="md:absolute flex-col items-center flex w-[20rem] md:mt-[-24rem] md:right-8">
 			<div
 				class="bg-black text-white w-full flex items-center justify-center py-6 rounded-xl mb-[-1rem]"
 			>
@@ -50,7 +52,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex mt-[-4rem] justify-between">
+	<div class="flex md:flex-row flex-col-reverse gap-y-16 mt-[-4rem] justify-between">
 		<div class="flex items-center gap-4">
 			<span class="text-3xl ml-16 font-bold">Featured Highlights</span>
 			<MenuIconButton><Info /></MenuIconButton>
@@ -60,11 +62,11 @@
 			<span class="text-3xl">Colors</span>
 			<div class="flex ml-4 items-center justify-center">
 				<div
-					class:invisible={color != 'grey'}
+					class:invisible={color != 'silver'}
 					class="rounded-full w-9 h-9 flex border-gray-500 border-solid border-2 items-center justify-center"
 				>
 					<div
-						on:click={() => setColor('grey')}
+						on:click={() => setColor('silver')}
 						class="visible cursor-pointer rounded-full bg-gray-400 h-6 w-6"
 					/>
 				</div>
