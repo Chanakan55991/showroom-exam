@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"lucide-svelte": "^0.279.0"
+		"lucide-svelte": "^0.279.0",
+		"svelte-french-toast": "^1.2.0"
 	}
 }
